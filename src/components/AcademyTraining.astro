@@ -1,0 +1,139 @@
+---
+import ModelAcademy from "./model/ModelAcademy.astro";
+---
+
+<section>
+  <h3
+    class="text-lg py-1 my-4 font-semibold text-slate-800 dark:text-gray-400 border-b-4 border-gray-200 dark:border-gray-700"
+  >
+    Formacion Academica
+  </h3>
+  <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-48 overflow-hidden rounded-lg">
+      <!-- Item 1 -->
+
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <div class="grid grid-cols-2 gap-x-6 mb-6 mx-6">
+          <ModelAcademy
+            title="Diplomado en Business Intelligence, Analytics y Big Data"
+            subtitle="Universidad Nacional de Ingenieria (2022)"
+            tags="Nota Maxima"
+            message=""
+            logo="./assets/image/uni-icon.png"
+            skils={["SQL", "Python","PowerBI","Scrum"]}
+          />
+          <ModelAcademy
+            title="Bachiller en Ingenieria Industrial"
+            subtitle="Universidad Nacional Mayor de San Marcos (2017 - 2022)"
+            tags="Quinto Puesto"
+            message=""
+            logo="./assets/image/unmsm-icon.png"
+            skils={["SQL","Java", "C++"]}
+          />
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="grid grid-cols-2 gap-x-6 mb-6 mx-6">
+          <ModelAcademy
+            title="Especializacion Full Stack ( Angular - SpringBoot )"
+            subtitle="Galaxy Training (2023)"
+            tags="Diploma de Excelencia"
+            message=""
+            logo=""
+            skils={["Angular", "Spring Boot"]}
+          />
+          <ModelAcademy
+            title="Bootcamp Front-End Developer"
+            subtitle="Oracle Next Education (2023)"
+            tags="En Curso"
+            message=""
+            logo=""
+            skils={["React"]}
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Slider indicators -->
+    <div
+      class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+    >
+      <button
+        type="button"
+        class="w-10 h-2"
+        aria-current="true"
+        aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button
+        type="button"
+        class="w-10 h-2"
+        aria-current="false"
+        aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+    </div>
+    <!-- Slider controls -->
+    <button
+      type="button"
+      class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4"></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button
+      type="button"
+      class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+</section>
+<script>
+  import { initFlowbite } from "flowbite";
+</script>
+
+<!-- Business Intelligence ( SQL Server y Power BI )
+Advanced Analytics ( R y Python )
+Big Data Technologies ( AWS, Hadoop y Spark )
+Agile Data ( LEAN, SCRUM y Desing Thinking ) -->
+
+<!-- Programación estructural y orientada a objetos con C++
+      Modelamiento, implementación y administración de Base de Datos con SQL Server
+      Desarrollo de aplicaciones de escritorio basadas en JAVA y C# -->
