@@ -1,13 +1,24 @@
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
+---
+import "../styles/basic.css";
+import ThemeSwitcher from "../utils/ThemeSwitcher.astro";
+
+interface Props {
+  selectPage: string;
+}
+
+const { selectPage } = Astro.props;
+---
+
+<nav class="nav-container">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
     <a href="/" class="flex items-center">
-      <p
-        class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+      <h1
+        class="self-center text-xl font-semibold whitesh1ace-nowrap dark:text-white"
       >
         &lt;luis122448.&nbsp;<span class="text-cyan-500">dev</span>/&gt;
-      </p>
+      </h1>
     </a>
     <button
       data-collapse-toggle="navbar-default"
@@ -33,84 +44,48 @@
       </svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul
-        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-      >
+      <ul class="nav-links">
         <li>
           <a
             href="/"
-            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+            class={`${selectPage == "home" ? "nav-title-select" : "nav-title"}`}
             aria-current="page">Sobre mi</a
           >
         </li>
         <li>
           <a
             href="/experience"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >Experiencia</a
+            class={`${
+              selectPage == "experience" ? "nav-title-select" : "nav-title"
+            }`}>Experiencia</a
           >
         </li>
         <li>
           <a
             href="/project"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >Proyectos</a
+            class={`${
+              selectPage == "project" ? "nav-title-select" : "nav-title"
+            }`}>Proyectos</a
           >
         </li>
         <li>
           <a
             href="/certification"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >Certificaciones</a
+            class={`${
+              selectPage == "certification" ? "nav-title-select" : "nav-title"
+            }`}>Certificaciones</a
           >
         </li>
         <li>
           <a
             href="/contact"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >Contacto</a
+            class={`${
+              selectPage == "contact" ? "nav-title-select" : "nav-title"
+            }`}>Contacto</a
           >
         </li>
       </ul>
     </div>
+    <ThemeSwitcher />
   </div>
 </nav>
-<button
-  id="toggleButton"
-  class="fixed top-4 right-4 p-2 rounded-full bg-gray-300 dark:bg-gray-700"
->
-  <i class="fas fa-sun text-yellow-500 dark:text-gray-300"></i>
-  <i class="fas fa-moon text-gray-700 dark:text-yellow-400"></i>
-</button>
-<script>
-  // DOMContentLoaded event listener
-  document.addEventListener("DOMContentLoaded", function () {
-    // Verificar el modo del usuario y aplicarlo por defecto
-    const userPrefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    function setDarkModePreference(darkMode: boolean) {
-      if (darkMode) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    }
-
-    // Método para cambiar el modo mediante el botón toggle
-    function toggleDarkMode() {
-      const isDarkMode = document.documentElement.classList.contains("dark");
-      setDarkModePreference(!isDarkMode);
-    }
-
-    // Evento para cambiar el modo cuando el botón toggle se presiona
-    const toggleButton = document.querySelector("#toggleButton");
-    if (toggleButton) {
-      toggleButton.addEventListener("click", toggleDarkMode);
-    }
-
-    // Aplicar el modo del usuario por defecto
-    setDarkModePreference(userPrefersDark);
-  });
-</script>

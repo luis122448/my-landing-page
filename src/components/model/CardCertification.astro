@@ -1,4 +1,6 @@
 ---
+import "../../styles/basic.css";
+
 interface Props {
   title: string;
   description: string;
@@ -21,31 +23,16 @@ const { title, description, logo, skils, link } = Astro.props;
       {title}
     </h3>
   </a>
-
-  <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+  <!-- <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
     {description}
-  </p>
-  <div class="space-x-2">
-    {
-      skils.map((skil) => (
-        <span class="bg-indigo-100 text-indigo-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-          {skil}
-        </span>
-      ))
-    }
+  </p> -->
+  <div class="basic-container-tag">
+    {skils.map((skil) => <span class="basic-tag-indigo">{skil}</span>)}
   </div>
-  <a
-    href=`${link}`
-    target="_blank"
-    class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
-  >
-    Visualizar
-
-    <span
-      aria-hidden="true"
-      class="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-    >
-      &rarr;
-    </span>
+  <a href=`${link}` target="_blank" class="basic-button-blue">
+    <p class="m-auto font-semibold">Visualizar</p>
+    <div class="basic-icon-container">
+      <i class="fa-solid fa-download fa-lg basic-icon"></i>
+    </div>
   </a>
 </article>

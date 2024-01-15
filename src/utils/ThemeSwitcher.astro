@@ -1,0 +1,93 @@
+---
+import "../styles/basic.css";
+---
+
+<section class="flex w-[40px] h-[40px] rounded-full">
+  <article class="relative">
+    <input
+      type="checkbox"
+      name="themeSwitcher"
+      id="themeSwitcher"
+      class="hidden"
+    />
+    <label for="themeSwitcher" class="relative cursor-pointer">
+      <div class="flex h-10 w-24 items-center rounded-full bg-gray-300">
+        <i id="faSum" class="fas fa-sun absolute left-2 z-10 p-2"></i>
+        <div
+          class="switchball absolute left-2 h-8 w-8 rounded-full bg-white shadow"
+        >
+        </div>
+        <i id="faMoon" class="fas fa-moon absolute right-2 z-10 p-2"></i>
+      </div>
+    </label>
+  </article>
+</section>
+<script>
+  const faSum = document.querySelector("#faSum");
+  const faMoon = document.querySelector("#faMoon");
+  const toggleButton = document.querySelector("#themeSwitcher");
+  // DOMContentLoaded event listener
+  document.addEventListener("DOMContentLoaded", function () {
+    // Verificar el modo del usuario y aplicarlo por defecto
+    const userPrefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    function setDarkModePreference(darkMode: boolean) {
+      if (darkMode) {
+        localStorage.setItem("darkMode", "enabled");
+        document.documentElement.classList.add("dark");
+        toggleButton?.setAttribute("checked", "checked");
+        faMoon?.classList.add("dark");
+        faSum?.classList.remove("light");
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+        document.documentElement.classList.remove("dark");
+        toggleButton?.removeAttribute("checked");
+        faSum?.classList.add("light");
+        faMoon?.classList.remove("dark");
+      }
+    }
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+      setDarkModePreference(true);
+    } else if (localStorage.getItem("darkMode") === "disabled") {
+      setDarkModePreference(false);
+    } else if (userPrefersDark) {
+      setDarkModePreference(true);
+    } else {
+      setDarkModePreference(false);
+    }
+
+    // Método para cambiar el modo mediante el botón toggle
+    function toggleDarkMode() {
+      const isDarkMode = document.documentElement.classList.contains("dark");
+      setDarkModePreference(!isDarkMode);
+    }
+
+    // Evento para cambiar el modo cuando el botón toggle se presiona
+    toggleButton?.addEventListener("click", toggleDarkMode);
+
+  });
+</script>
+<style>
+  #themeSwitcher:checked + label .switchball {
+    transform: translateX(50px);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #themeSwitcher:not(:checked) + label .switchball {
+    transform: translateX(
+      0
+    ); /* Vuelve a la posición inicial al no estar marcado */
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .light {
+    color: #eab308;
+  }
+
+  .dark {
+    color: #0c4a6e;
+  }
+</style>

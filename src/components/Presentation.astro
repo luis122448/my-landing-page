@@ -1,3 +1,7 @@
+---
+import "../styles/basic.css";
+---
+
 <section
   class="flex-col justify-center items-center md:grid md:grid-cols-4 md:gap-x-6 mx-auto"
 >
@@ -26,31 +30,28 @@
   </div>
   <div class="md:col-span-3 flex-col justify-center space-y-2">
     <h1 class="text-xl font-bold text-slate-800 dark:text-gray-400">
-      Hola, soy <span class="text-cyan-600">Luis Antonio Calvo Quispe (luis122448)</span>
+      Hola, soy <span class="text-cyan-600">Luis Antonio Calvo Quispe</span>
     </h1>
-    <h4 class="text-lg font-semibold text-slate-800 dark:text-gray-400">
+    <h4 class="basic-title">
       Full Stack Developer | Bachiller en Ingenieria Industrial
     </h4>
-    <div>
+    <div class="basic-text">
       Bachiller en Ingenieria Industrial especializado como Full Stack Developer
-      ( Java - Angular ) con dos año te experiencia como desarrollador y
+      ( Java - Angular ) con dos años de experiencia como desarrollador y
       administrador de base de datos relacionales ( Oracle, PostgresSQL y MySQL
-      ) y apasionado en la implementacion de soluciones inteligentes utilziando
-      IA
+      ) y desarrollo de servicios web con Python ( FASTAPI )<br />
+      Experiencia en despliege de aplicaciones con Docker en servicios cloud de AWS
+      ( EC2, S3 ) y Railway
     </div>
     <d class="grid grid-cols-2">
       <div class="flex justify-center">
-        <p class="font-semibold">Stack Tecnologico :</p>
+        <p class="basic-title-list">Stack Tecnologico</p>
         <div class="w-[200px] pl-6">
           <ol
             class="col-span-2 md:col-span-1 flex h-full w-full items-center justify-center"
           >
-            <li
-              class="flex w-full items-center after:inline-block after:h-1 after:w-full after:border-4 after:border-b after:border-gray-100 after:content-[''] dark:after:border-gray-700"
-            >
-              <span
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700"
-              >
+            <li class="basic-line-list">
+              <span class="basic-circle-list">
                 <div class="h-8 w-8 relative">
                   <img
                     src="./assets/svg/oracle-icon.svg"
@@ -69,27 +70,21 @@
                 </div>
               </span>
             </li>
-            <li
-              class="flex w-full items-center after:inline-block after:h-1 after:w-full after:border-4 after:border-b after:border-gray-100 after:content-[''] dark:after:border-gray-700"
-            >
-              <span
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700"
-              >
+            <li class="basic-line-list">
+              <span class="basic-circle-list">
                 <div class="h-8 w-8 relative">
                   <img
                     src="./assets/svg/springio-icon.svg"
                     alt=""
-                    width="65%"
+                    basic-icon-container
                     height="65%"
-                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                    class="basic-icon"
                   />
                 </div>
               </span>
             </li>
             <li class="flex w-full items-center">
-              <span
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700"
-              >
+              <span class="basic-circle-list">
                 <div class="h-8 w-8 absolute">
                   <img
                     src="./assets/svg/tailwindcss-icon.svg"
@@ -112,18 +107,24 @@
         </div>
       </div>
       <div class="flex justify-center">
-        <button
-          type="button"
-          class="w-[150px] flex justify-center bg-sky-700 hover:bg-sky-800 focus:ring-sky-300 text-white space-x-2 rounded px-5 py-2 text-sm font-medium"
-        >
-          <div class="relative my-auto w-[12px] h-[12px]">
-            <i
-              class="fa-solid fa-download fa-lg absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            ></i>
+        <button type="button" class="basic-button-blue" id="downloadCV">
+          <div class="basic-icon-container">
+            <i class="fa-solid fa-download fa-lg basic-icon"></i>
           </div>
-          <p>Descagar CV</p>
+          <p class="m-auto font-semibold">Descagar CV</p>
         </button>
       </div>
     </d>
   </div>
 </section>
+<script>
+  document.getElementById("downloadCV")?.addEventListener("click", () => {
+    var rute = "./assets/pdf/CV-LuisAntonioCalvoQuispe-Software.pdf";
+    var link = document.createElement("a");
+    link.href = rute;
+    link.download = "CV-LuisAntonioCalvoQuispe-Software.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>

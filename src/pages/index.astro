@@ -10,11 +10,11 @@ import ProjectPortfolio from '../components/ProjectPortfolio.astro';
 
 <Layout title="Portfolio by luis122448", description="Portafolios de projectos de luis122448">
 	<main class="md:mx-10 bg-slate-100 dark:bg-slate-900 dark:text-gray-400 max-w-4xl mx-auto">
-		<Header></Header>
+		<Header selectPage='home'></Header>
 		<Presentation></Presentation>
 		<WorkExperience></WorkExperience>
 		<AcademyTraining></AcademyTraining>
-		<ProjectPortfolio></ProjectPortfolio>
+		<ProjectPortfolio isOpen={false}></ProjectPortfolio>
 		<Footer></Footer>
 	</main>
 </Layout>
