@@ -1,8 +1,13 @@
 ---
 import "../styles/basic.css";
----
 
-<section class="">
+interface Props{
+  isOpen: boolean;
+}
+
+const { isOpen } = Astro.props;
+---
+<section class=`${isOpen ? 'body-container' : ''}`>
   <h3 class="section-title">Experiencia Laboral</h3>
   <ol class="border-default">
     <li class="mb-10 ml-6">
@@ -22,7 +27,7 @@ import "../styles/basic.css";
           <time class="basic-sub-title">Jornada completa 1 año y 9 meses</time>
           <ol class="relative border-s border-default">
             <li class="mb-10 ms-4">
-              <div class="basic-container-list"></div>
+              <div class="basic-circle-list"></div>
               <h3 class="basic-title-list">DBA de Applicationes Oracle</h3>
               <time class="basic-sub-title-list">Mayo 2023 - Hoy</time>
               <p class="basic-text-list">
@@ -44,7 +49,7 @@ import "../styles/basic.css";
               </p>
             </li>
             <li class="ms-4">
-              <div class="basic-container-list"></div>
+              <div class="basic-circle-list"></div>
               <h3 class="basic-title-list">
                 Programador PL/SQL y Analista de Datos
               </h3>
@@ -69,13 +74,7 @@ import "../styles/basic.css";
 <style>
   .grid-container {
     display: grid;
-    grid-template-columns: 48px 1fr; /* La primera columna tiene 80px de longitud fija, la segunda ocupa el resto del espacio */
-    gap: 16px; /* Espaciado entre columnas */
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
   }
-
-  /* Estilos para hacer más evidente la estructura */
-  /* .grid-container div {
-      border: 1px solid #ccc;
-      padding: 8px;
-    } */
 </style>

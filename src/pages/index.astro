@@ -6,13 +6,14 @@ import Presentation from '../components/Presentation.astro';
 import WorkExperience from '../components/WorkExperience.astro';
 import AcademyTraining from '../components/AcademyTraining.astro';
 import ProjectPortfolio from '../components/ProjectPortfolio.astro';
+import '../styles/basic.css';
 ---
 
 <Layout title="Portfolio by luis122448", description="Portafolios de projectos de luis122448">
-	<main class="md:mx-10 bg-slate-100 dark:bg-slate-900 dark:text-gray-400 max-w-4xl mx-auto">
+	<main class="main-container">
 		<Header selectPage='home'></Header>
 		<Presentation></Presentation>
-		<WorkExperience></WorkExperience>
+		<WorkExperience isOpen={false}></WorkExperience>
 		<AcademyTraining></AcademyTraining>
 		<ProjectPortfolio isOpen={false}></ProjectPortfolio>
 		<Footer></Footer>

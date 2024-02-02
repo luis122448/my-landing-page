@@ -3,10 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import ProjectPortfolio from '../components/ProjectPortfolio.astro';
+import '../styles/basic.css';
 ---
 
 <Layout title="Portfolio by luis122448", description="Portafolios de projectos de luis122448">
-	<main class="md:mx-10 bg-slate-100 dark:bg-slate-900 dark:text-gray-400 max-w-4xl mx-auto">
+	<main class="main-container">
 		<Header selectPage='project'></Header>
 		<ProjectPortfolio isOpen={true}></ProjectPortfolio>
 		<Footer></Footer>

@@ -1,0 +1,45 @@
+---
+import "../styles/basic.css";
+
+interface Props {
+  tags: string[];
+}
+
+interface Icon {
+  id: number;
+  tag: string;
+  url: string;
+}
+
+interface IconUrl {
+  tag: string;
+  url: string;
+}
+
+const { tags } = Astro.props;
+
+const Icons: Icon[] = tags.map((tag, index) => ({
+  id: index,
+  tag: tag,
+  url: `../assets/svg/${tag}-icon.svg`,
+}));
+---
+
+<section class="flex flex-row space-x-4">
+  {
+    Icons.map(({ tag, url }) => (
+      <div
+        class="w-8 h-8 relative bg-slate-200
+    dark:bg-slate-100 rounded hover:scale-120 hover:transform transition-all"
+      >
+        <img
+          alt={tag}
+          src={url}
+          class="w-6 h-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          title={tag}
+        />
+      </div>
+    ))
+  }
+</section>
+<style></style>

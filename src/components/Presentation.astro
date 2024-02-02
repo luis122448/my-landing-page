@@ -1,14 +1,15 @@
 ---
 import "../styles/basic.css";
+import StackTech from "../utils/StackTech.astro";
 ---
 
 <section
-  class="flex-col justify-center items-center md:grid md:grid-cols-4 md:gap-x-6 mx-auto"
+  class="flex-col justify-center items-center sm:grid sm:grid-cols-4 sm:gap-x-6 mx-auto mt-4"
 >
-  <div class="md:col-span-1 space-y-2 mx-auto">
+  <article class="sm:col-span-1 space-y-2 mx-auto">
     <img
       src="/assets/image/foto.jpg"
-      alt=""
+      alt="luis-antonio-calvo-quispe"
       class="p-2 w-48 h-48 rounded-full"
     />
     <div
@@ -27,8 +28,8 @@ import "../styles/basic.css";
         <i class="fa-brands fa-telegram fa-2xl"></i>
       </a>
     </div>
-  </div>
-  <div class="md:col-span-3 flex-col justify-center space-y-2">
+  </article>
+  <article class="sm:col-span-3 flex-col justify-center space-y-2">
     <h1 class="text-xl font-bold text-slate-800 dark:text-gray-400">
       Hola, soy <span class="text-cyan-600">Luis Antonio Calvo Quispe</span>
     </h1>
@@ -37,16 +38,17 @@ import "../styles/basic.css";
     </h4>
     <div class="basic-text">
       Bachiller en Ingenieria Industrial especializado como Full Stack Developer
-      ( Java - Angular ) con dos años de experiencia como desarrollador y
-      administrador de base de datos relacionales ( Oracle, PostgresSQL y MySQL
-      ) y desarrollo de servicios web con Python ( FASTAPI )<br />
+      ( <span class="resalt-text">Java - Angular</span> ) con dos años de experiencia como desarrollador y
+      administrador de base de datos relacionales ( <span class="resalt-text">Oracle, PostgresSQL y MySQL</span>
+      ) y desarrollo de servicios web con <span class="resalt-text">Python - FastAPI</span><br />
       Experiencia en despliege de aplicaciones con Docker en servicios cloud de AWS
-      ( EC2, S3 ) y Railway
+      ( <span class="resalt-text">EC2, S3</span> ) y Railway
     </div>
-    <d class="grid grid-cols-2">
-      <div class="flex justify-center">
-        <p class="basic-title-list">Stack Tecnologico</p>
-        <div class="w-[200px] pl-6">
+    <div class="grid grid-cols-3">
+      <div class="col-span-2 flex space-x-4">
+        <p class="basic-title-list">Stack Tech :</p>
+        <StackTech tags={['postgresql','redis','mongodb','springio','angular','docker']}></StackTech>
+        <!-- <div class="w-[200px] pl-6">
           <ol
             class="col-span-2 md:col-span-1 flex h-full w-full items-center justify-center"
           >
@@ -85,7 +87,7 @@ import "../styles/basic.css";
             </li>
             <li class="flex w-full items-center">
               <span class="basic-circle-list">
-                <div class="h-8 w-8 absolute">
+                <div class="h-8 w-8 relative">
                   <img
                     src="./assets/svg/tailwindcss-icon.svg"
                     alt=""
@@ -104,9 +106,9 @@ import "../styles/basic.css";
               </span>
             </li>
           </ol>
-        </div>
+        </div> -->
       </div>
-      <div class="flex justify-center">
+      <div class="col-span-1 flex justify-center">
         <button type="button" class="basic-button-blue" id="downloadCV">
           <div class="basic-icon-container">
             <i class="fa-solid fa-download fa-lg basic-icon"></i>
@@ -114,8 +116,8 @@ import "../styles/basic.css";
           <p class="m-auto font-semibold">Descagar CV</p>
         </button>
       </div>
-    </d>
-  </div>
+    </div>
+  </article>
 </section>
 <script>
   document.getElementById("downloadCV")?.addEventListener("click", () => {

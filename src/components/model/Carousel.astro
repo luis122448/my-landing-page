@@ -13,19 +13,17 @@ interface Image {
 
 const { urlImages } = Astro.props;
 
-// const images: Image[] = urlImages.map((url, index) => ({ id: index, url }));
 const images: Image[] = urlImages.map((url, index) => ({ id: index, url, active: index === 0 }));
 ---
 
 <div id="indicators-carousel" class="relative w-full" data-carousel="slide">
-  <!-- Carousel wrapper -->
   <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
     {
       images.map(({ id, url, active }) => (
         <div class="hidden duration-700 ease-in-out" data-carousel-item={`${active ? 'active' : ''}`}>
           <img
             src={url}
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-md"
             alt="..."
           />
         </div>

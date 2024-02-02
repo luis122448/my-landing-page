@@ -1,44 +1,55 @@
 ---
 import "../styles/basic.css";
 import Carousel from "./model/Carousel.astro";
+import StackTech from "../utils/StackTech.astro";
 
 interface Props {
   isOpen: boolean;
 }
 
 const { isOpen } = Astro.props;
----
 
-<section>
+const urlImagesSmartShell = [
+  "./../../public/assets/project/smart-shell/1.jpg",
+  "./../../public/assets/project/smart-shell/2.jpg",
+  "./../../public/assets/project/smart-shell/3.jpg",
+  "./../../public/assets/project/smart-shell/4.jpg",
+  "./../../public/assets/project/smart-shell/5.jpg",
+];
+
+const urlImagesProLearnTracker = [
+  "./../../public/assets/project/smart-shell/1.jpg",
+  "./../../public/assets/project/smart-shell/2.jpg",
+  "./../../public/assets/project/smart-shell/3.jpg",
+  "./../../public/assets/project/smart-shell/4.jpg",
+  "./../../public/assets/project/smart-shell/5.jpg",
+];
+---
+<section class=`${isOpen ? 'body-container' : ''}`>
   <h3 class="section-title">Proyectos y Experiencia Academica</h3>
   <section class="bg-white dark:bg-gray-900">
-    <div
-      class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
-    >
-      <!-- <img
-        class="w-full hidden dark:block"
-        src="./../../public/assets/project/smart-shell-image.jpg"
-        alt="dashboard image"
-      /> -->
-      <Carousel urlImages={["./../../public/assets/project/smart-shell-image.jpg","https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"]} />
+    <article class="grid grid-cols-2 gap-x-4 h-12 mx-6">
+      <div class="col-span-1">
+        <h2 class="project-title">Sistema de Facturación Online<br><span class="text-cyan-600">Smart Shell</span></h2>
+      </div>
+      <div class="col-span-1 p-4 flex justify-end">
+        <StackTech tags={['postgresql','redis','mongodb','springio','angular','docker']}></StackTech>
+      </div>
+    </article>
+    <article class="project-container">
+      <Carousel urlImages={urlImagesSmartShell} />
       <div class="mt-4 md:mt-0">
-        <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-        >
-          Sistema de Facturación Online
-        </h2>
         <ul
-          class="mb-6 max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+          class="basic-text list-none md:list-disc list-outside"
         >
-          <li>Emisión e impresión de comprobantes electrónicos</li>
-          <li>Mantenimiento simple de artículos, clientes, …</li>
+          <li>Emisión, configuracion e impresión de comprobantes electrónicos</li>
+          <li>Mantenimiento de artículos, clientes, vendedores y tipo de cambio</li>
           <li>
-            Importación y exportación masiva de información (Lista de Precios)
+            Importación y exportación masiva de articulos y lista de precios
           </li>
-          <li>Cargar y control de subida de archivos (Archivos Adjuntos)</li>
+          <li>Carga y control de subida de archivos adjuntos</li>
           <li>
-            Sistema de autenticación (JWT), manejo de memoria Cache (Redis) y
-            Local Storage.
+            Authentication y autorización de usuarios con roles y permisos
           </li>
         </ul>
         <a
@@ -48,49 +59,43 @@ const { isOpen } = Astro.props;
         >
           <p class="m-auto font-semibold">Ver Proyecto</p>
           <div class="basic-icon-container">
-            <i class="fa-solid fa-download fa-lg basic-icon"></i>
+            <i class="fa-solid fa-up-right-from-square basic-icon"></i>
           </div>
         </a>
       </div>
-    </div>
+    </article>
   </section>
   <section class="bg-white dark:bg-gray-900">
-    <div
-      class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
-    >
-      <img
-        class="w-full dark:hidden"
-        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
-        alt="dashboard image"
-      />
-      <img
-        class="w-full hidden dark:block"
-        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg"
-        alt="dashboard image"
-      />
-      <div class="mt-4 md:mt-0">
-        <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-        >
-          Sistema de Seguimiento y Capacitacion del Personal
-        </h2>
-        <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-          "Potencia tu equipo con nuestro Sistema de Seguimiento y Capacitación
-          del Personal. Mejora habilidades, realiza seguimientos efectivos y
-          fomenta un crecimiento profesional continuo. Impulsa el éxito de tu
-          empresa con un personal más capacitado y comprometido."
-        </p>
-        <a
-        href="https://smart-shell.luis122448.com"
-        class="basic-button-blue"
-        target="_blank"
-      >
-        <p class="m-auto font-semibold">Proyecto en Construccion</p>
-        <div class="basic-icon-container">
-          <i class="fa-solid fa-download fa-lg basic-icon"></i>
-        </div>
-      </a>
+    <article class="grid grid-cols-2 gap-x-4 h-16 mx-6">
+      <div class="col-span-1">
+        <h2 class="project-title">Sistema de Seguimiento y Capacitacion del Personal<br><span class="text-cyan-600">Pro Learn Tracker</span></h2>
       </div>
-    </div>
+      <div class="col-span-1 p-4 flex justify-end">
+        <StackTech tags={['mysql','springio','angular','docker']}></StackTech>
+      </div>
+    </article>
+    <article class="project-container">
+      <Carousel urlImages={urlImagesProLearnTracker} />
+      <div class="mt-4 md:mt-0">
+        <ul
+          class="basic-text list-none md:list-disc list-outside"
+        >
+          <li>Implementacion de modulos, cursos y clases personalizable por usuario</li>
+          <li>Seguimiento y control de la asistencia y participacion</li>
+          <li>Examenes, Quiz y control de evaluacion</li>
+          <li>Sistema de certificacion y verificacion</li>
+        </ul>
+        <a
+          href="https://smart-shell.luis122448.com"
+          class="basic-button-blue"
+          target="_blank"
+        >
+          <p class="m-auto font-semibold">Proyecto en Construccion</p>
+          <div class="basic-icon-container">
+            <i class="fa-solid fa-up-right-from-square basic-icon"></i>
+          </div>
+        </a>
+      </div>
+    </article>
   </section>
 </section>

@@ -74,7 +74,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<meta property="linkedin:description" content={description} />
 		<meta property="linkedin:image" content="https://raw.githubusercontent.com/luis122448/animationland-astro/main/public/assets/icons/ms-icon-310x310.png" />
 	</head>
-	<body class="bg-slate-100 dark:bg-slate-900 flex justify-center">
+	<body class="bg-slate-50 dark:bg-slate-900 flex justify-center w-full h-full">
 		<slot />
 	</body>
 </html>
@@ -91,4 +91,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+	html,
+	body {
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+	}
+
+	.body-container {
+		width: 100%;
+		height: calc(100% - 200px);
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
 </style>
