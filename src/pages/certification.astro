@@ -1,79 +1,85 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import CardCertification from '../components/model/CardCertification.astro';
-import '../styles/basic.css';
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import CardCertification from "../components/model/CardCertification.astro";
+import "../styles/basic.css";
 ---
 
-<Layout title="Portfolio by luis122448", description="Portafolios de projectos de luis122448">
-	<main class="main-container">
-		<Header selectPage='certification'></Header>
-        <main class="py-12 w-96 flex-col space-y-6 md:w-auto md:space-x-0 md:space-y-0 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-6 md:gap-y-6">
-            <CardCertification
-                title='SPRING BOOT DEVELOPER: ARQUITECTURA, FUNDAMENTOS Y APLICACIONES'
-                description=''
-                logo='./assets/image/galaxy-training-logo.webp'
-                skils={['SpringBoot','Postman']}
-                link='https://drive.google.com/file/d/1OdMPvkbyfe8a9SfucUxujkrssXUSkcAz/view?usp=drive_link'>
-            </CardCertification>
-            <CardCertification
-                title='SPRING SECURITY CORE: ARCHITECTURE AND APPLICATIONS'
-                description=''
-                logo='./assets/image/galaxy-training-logo.webp'
-                skils={['SpringBoot','Postman','SpringSecurity']}
-                link='https://drive.google.com/file/d/1o3bA76NE5ft1ZFg32FK8_CDRPhuy8wW2/view?usp=drive_link'>
-            </CardCertification>
-            <CardCertification
-                title='FULL-STACK JAVA DEVELOPER: SPRING BOOT Y ANGULAR 15'
-                description=''
-                logo='./assets/image/galaxy-training-logo.webp'
-                skils={['Angular','SpringBoot']}
-                link='https://drive.google.com/file/d/1c0TMva4wxL-t1IU2czRL49upqIcLBq1D/view?usp=drive_link'>
-            </CardCertification>
-            <CardCertification
-                title='JAVA DEVELOPER'
-                description=''
-                logo='./assets/image/sistemas-uni-logo.webp'
-                skils={['Java','PL/SQL']}
-                link='https://drive.google.com/file/d/14aKJ9rTDT4JQ-UdJev9qBp2WoZ3VAP0y/view?usp=drive_link'>
-            </CardCertification>
-            <CardCertification
-                title='DATA BASE ADMINISTRADOR'
-                description=''
-                logo='./assets/image/sistemas-uni-logo.webp'
-                skils={['SQL Server']}
-                link='https://drive.google.com/file/d/1mUG0kfgVlK2Fsj4-tPC5NQN10pZGAcSe/view?usp=drive_link'>
-            </CardCertification>
-            <CardCertification
-                title='DISEÑO DE SITIOS WEB CON HTML 5'
-                description=''
-                logo='./assets/image/sistemas-uni-logo.webp'
-                skils={['HTML5','CSS']}
-                link='https://drive.google.com/file/d/1R5F2yUOB-vrxe-FbIOAMvZRtR43vA15b/view?usp=drive_link'>
-            </CardCertification>
-            <CardCertification
-                title='PYTHON DEVELOPER'
-                description=''
-                logo='./assets/image/sistemas-uni-logo.webp'
-                skils={['Python']}
-                link='https://drive.google.com/file/d/18fa5MXQKnrSIVejlmCQg8sjTN1im0ozL/view?usp=drive_link'>
-            </CardCertification>
-            <CardCertification
-                title='BUSINESS INTELLIGENCE CON SQL SERVER'
-                description=''
-                logo='./assets/image/sistemas-uni-logo.webp'
-                skils={['SQL Server','PowerBi']}
-                link='https://drive.google.com/file/d/1JPvX1O-QJmLIAgYylJGaRu1kiDejc9dt/view?usp=drive_link'>
-            </CardCertification>
-            <CardCertification
-                title='MICROSOFT VISUAL STUDIO CON C#'
-                description=''
-                logo='./assets/image/sistemas-uni-logo.webp'
-                skils={['C#']}
-                link='https://drive.google.com/file/d/1ltGSwdxsCK7KfEkTWs4bDs2ae7LUx-2k/view?usp=drive_link'>
-            </CardCertification>
-        </main>
-		<Footer></Footer>
-	</main>
+<Layout
+  title="Portfolio by luis122448"
+  ,
+  description="Portafolios de projectos de luis122448"
+>
+  <main class="main-container">
+    <Header selectPage="certification" />
+    <section class="body-container">
+      <article class="article-container">
+        <CardCertification
+          title="SPRING BOOT DEVELOPER: ARQUITECTURA, FUNDAMENTOS Y APLICACIONES"
+          description=""
+          logo="./assets/image/galaxy-training-logo.webp"
+          skils={["SpringBoot", "Postman"]}
+          link="https://drive.google.com/file/d/1OdMPvkbyfe8a9SfucUxujkrssXUSkcAz/view?usp=drive_link"
+        />
+        <CardCertification
+          title="SPRING SECURITY CORE: ARCHITECTURE AND APPLICATIONS"
+          description=""
+          logo="./assets/image/galaxy-training-logo.webp"
+          skils={["SpringBoot", "Postman", "SpringSecurity"]}
+          link="https://drive.google.com/file/d/1o3bA76NE5ft1ZFg32FK8_CDRPhuy8wW2/view?usp=drive_link"
+        />
+        <CardCertification
+          title="FULL-STACK JAVA DEVELOPER: SPRING BOOT Y ANGULAR 15"
+          description=""
+          logo="./assets/image/galaxy-training-logo.webp"
+          skils={["Angular", "SpringBoot"]}
+          link="https://drive.google.com/file/d/1c0TMva4wxL-t1IU2czRL49upqIcLBq1D/view?usp=drive_link"
+        />
+        <CardCertification
+          title="JAVA DEVELOPER"
+          description=""
+          logo="./assets/image/sistemas-uni-logo.webp"
+          skils={["Java", "PL/SQL"]}
+          link="https://drive.google.com/file/d/14aKJ9rTDT4JQ-UdJev9qBp2WoZ3VAP0y/view?usp=drive_link"
+        />
+        <CardCertification
+          title="DATA BASE ADMINISTRADOR"
+          description=""
+          logo="./assets/image/sistemas-uni-logo.webp"
+          skils={["SQL Server"]}
+          link="https://drive.google.com/file/d/1mUG0kfgVlK2Fsj4-tPC5NQN10pZGAcSe/view?usp=drive_link"
+        />
+        <CardCertification
+          title="DISEÑO DE SITIOS WEB CON HTML 5"
+          description=""
+          logo="./assets/image/sistemas-uni-logo.webp"
+          skils={["HTML5", "CSS"]}
+          link="https://drive.google.com/file/d/1R5F2yUOB-vrxe-FbIOAMvZRtR43vA15b/view?usp=drive_link"
+        />
+        <CardCertification
+          title="PYTHON DEVELOPER"
+          description=""
+          logo="./assets/image/sistemas-uni-logo.webp"
+          skils={["Python"]}
+          link="https://drive.google.com/file/d/18fa5MXQKnrSIVejlmCQg8sjTN1im0ozL/view?usp=drive_link"
+        />
+        <CardCertification
+          title="BUSINESS INTELLIGENCE CON SQL SERVER"
+          description=""
+          logo="./assets/image/sistemas-uni-logo.webp"
+          skils={["SQL Server", "PowerBi"]}
+          link="https://drive.google.com/file/d/1JPvX1O-QJmLIAgYylJGaRu1kiDejc9dt/view?usp=drive_link"
+        />
+        <CardCertification
+          title="MICROSOFT VISUAL STUDIO CON C#"
+          description=""
+          logo="./assets/image/sistemas-uni-logo.webp"
+          skils={["C#"]}
+          link="https://drive.google.com/file/d/1ltGSwdxsCK7KfEkTWs4bDs2ae7LUx-2k/view?usp=drive_link"
+        />
+      </article>
+    </section>
+    <Footer />
+  </main>
 </Layout>

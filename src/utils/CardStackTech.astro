@@ -25,19 +25,22 @@ const Icons: Icon[] = tags.map((tag, index) => ({
 }));
 ---
 
-<section class="flex flex-row space-x-2">
+<section class="grid grid-cols-3 grid-rows-3 gap-x-4 gap-y-8">
   {
     Icons.map(({ tag, url }) => (
       <div
-        class="w-8 h-8 relative bg-slate-200
+        class="w-20 h-32 relative bg-slate-200
     dark:bg-slate-100 rounded hover:scale-120 hover:transform transition-all"
       >
         <img
           alt={tag}
           src={url}
-          class="w-6 h-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          class="w-16 h-16 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-3/4"
           title={tag}
         />
+        <div class="absolute bottom-2 w-full">
+          <p class="basic-sub-title text-center">{tag}</p>
+        </div>
       </div>
     ))
   }

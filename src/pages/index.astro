@@ -12,10 +12,12 @@ import '../styles/basic.css';
 <Layout title="Portfolio by luis122448", description="Portafolios de projectos de luis122448">
 	<main class="main-container">
 		<Header selectPage='home'></Header>
-		<Presentation></Presentation>
-		<WorkExperience isOpen={false}></WorkExperience>
-		<AcademyTraining></AcademyTraining>
-		<ProjectPortfolio isOpen={false}></ProjectPortfolio>
+		<main class="body-container">
+			<Presentation></Presentation>
+			<WorkExperience isOpen={false}></WorkExperience>
+			<AcademyTraining></AcademyTraining>
+			<ProjectPortfolio isOpen={false}></ProjectPortfolio>
+		</main>
 		<Footer></Footer>
 	</main>
 </Layout>

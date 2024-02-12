@@ -14,14 +14,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <script
       src="https://kit.fontawesome.com/b646cce0fb.js"
-      crossorigin="anonymous"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
@@ -29,8 +30,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Global Metadata -->
-    <link rel="icon" href="/assets/icons/images/icon/192x192.png" />
-    <link rel="apple-touch-icon" href="/assets/icons/images/icon/192x192.png" />
+    <link rel="icon" href="/assets/icons/favicon-96x96.png" />
+    <link rel="apple-touch-icon" href="/assets/icons/favicon-96x96.png" />
     <!-- <link rel="manifest" href="/assets/icons/manifest.webmanifest" /> -->
     <meta name="google" content="notranslate" />
     <link
@@ -142,6 +143,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </body>
 </html>
 <style is:global>
+  @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
+
   :root {
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(
@@ -154,28 +157,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   html {
     font-family: system-ui, sans-serif;
     background-color: #f6f6f6;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-  html,
-  body {
     overflow-x: hidden;
     height: 100%;
     width: 100%;
   }
-
+  body {
+    color: #2b2c48;
+    font-family: "Jost", sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1566738780863-f9608f88f3a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    padding: 12px;
+  }
   .body-container {
     width: 100%;
-    height: calc(100% - 200px);
+    height: calc(100% - 150px);
     overflow-x: hidden;
     overflow-y: auto;
   }

@@ -23,16 +23,18 @@
   background: #555;
 }
 
+.main-container {
+  @apply px-2 sm:px-4 bg-slate-50 dark:bg-slate-900 dark:text-gray-400 max-w-4xl mx-auto rounded-lg
+  w-[800px]
+  xl:min-w-[800px]
+}
+
 .border-default {
   @apply border-slate-500 dark:border-gray-700
 }
 
 .nav-container {
   @apply w-full bg-transparent border-gray-200 dark:bg-gray-900 flex px-4 py-2 justify-around
-}
-
-.main-container {
-  @apply sm:px-4 bg-slate-50 dark:bg-slate-900 dark:text-gray-400 max-w-4xl mx-auto
 }
 
 .nav-links {
@@ -85,6 +87,10 @@
 
 .basic-text{
   @apply mb-4 text-base font-normal text-gray-800 dark:text-gray-300
+}
+
+.basic-text-xs{
+  @apply mb-4 text-xs font-normal text-gray-800 dark:text-gray-300
 }
 
 .resalt-text{
@@ -436,4 +442,8 @@
 
 .divide-line {
   @apply divide-y divide-dotted divide-slate-500;
+}
+
+.article-container {
+  @apply py-12 w-96 flex-col space-y-6 md:w-auto md:space-x-0 md:space-y-0 md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-6 md:gap-y-6
 }
