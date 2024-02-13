@@ -22,14 +22,14 @@ const urlImagesProLearnTracker = [
   "../assets/project/pro-learn-tracker/7.jpg",
   ];
 ---
-<section class=`${isOpen ? 'body-container' : ''}`>
+<section class=`${isOpen ? 'body-container space-y-4 sm:space-y-0' : 'space-y-4 sm:space-y-0'}`>
   <h3 class="section-title">Proyectos y Experiencia Academica</h3>
   <section class="bg-white dark:bg-gray-900">
-    <article class="grid grid-cols-2 gap-x-4 h-12 mx-6">
+    <article class="grid grid-cols-2 gap-x-4 h-28 sm:h-12 sm:mx-6 py-2 sm:py-0">
       <div class="col-span-1">
         <h2 class="project-title">Sistema de Facturación Online<br><span class="text-cyan-600">Smart Shell</span></h2>
       </div>
-      <div class="col-span-1 p-4 flex justify-end">
+      <div class="col-span-1 sm:p-4 flex justify-end">
         <StackTech tags={['postgresql','redis','mongodb','springio','angular','docker']}></StackTech>
       </div>
     </article>
@@ -63,7 +63,7 @@ const urlImagesProLearnTracker = [
     </article>
   </section>
   <section class="bg-white dark:bg-gray-900">
-    <article class="grid grid-cols-2 gap-x-4 h-16 mx-6">
+    <article class="grid grid-cols-2 gap-x-4 h-42 sm:h-12 sm:mx-6 py-2 sm:py-0">
       <div class="col-span-1">
         <h2 class="project-title">Sistema de Seguimiento y Capacitacion del Personal<br><span class="text-cyan-600">Pro Learn Tracker</span></h2>
       </div>

@@ -11,9 +11,9 @@ interface Props {
 const { title, subtitle, tags, message, logo, skils } = Astro.props;
 ---
 
-<section class="flex space-x-4 h-[1000px]">
-  <article class="mt-2 w-12 h-14 rounded-lg dark:bg-slate-50 bg-slate-200">
-    <img src=`${logo}` alt="logo-uni" class="w-12 h-14 object-cover rounded-lg" />
+<section class="flex space-x-2 sm:space-x-4 sm:h-[1000px]">
+  <article class="mt-2 w-8 h-10 sm:w-12 sm:h-14 rounded-lg dark:bg-slate-50 bg-slate-200">
+    <img src=`${logo}` alt="logo-uni" class="w-8 h-10 sm:w-12 sm:h-14 object-cover rounded-lg" />
   </article>
   <article class="w-full h-full">
     <h3 class="basic-title">
@@ -23,7 +23,7 @@ const { title, subtitle, tags, message, logo, skils } = Astro.props;
     <p class="basic-container-tag">
       <span class="basic-tag-blue">{tags}</span>
     </p>
-    <div class="basic-text">
+    <div class="sm:mb-4 text-sm sm:text-base font-normal text-gray-800 dark:text-gray-300">
       {message}
     </div>
     <div class="basic-container-tag">

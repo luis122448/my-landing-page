@@ -9,87 +9,85 @@ interface Props {
 const { selectPage } = Astro.props;
 ---
 
-<nav class="nav-container">
-  <article class="ml-0 my-auto w-[160px]">
+<nav
+  class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+>
+  <div
+    class="ml-0 my-auto w-[160px] flex items-center space-x-3 rtl:space-x-reverse"
+  >
     <a href="/" class="block">
-      <h1
-        class="text-lg font-semibold whitesh1ace-nowrap dark:text-white"
-      >
+      <h1 class="text-lg font-semibold whitesh1ace-nowrap dark:text-white">
         &lt;luis122448.<span class="text-cyan-500">dev</span>/&gt;
       </h1>
     </a>
-  </article>
-  <article
-    class="max-w-screen-xl flex flex-wrap items-center justify-between py-2 px-4"
+  </div>
+  <button
+    data-collapse-toggle="navbar-default"
+    type="button"
+    class="inline-flex items-center p-2 w-10 h-8 ju8ify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    aria-controls="navbar-default"
+    aria-expanded="false"
   >
-    <button
-      data-collapse-toggle="navbar-default"
-      type="button"
-      class="inline-flex items-center p-2 w-10 h-8 ju8ify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      aria-controls="navbar-default"
-      aria-expanded="false"
+    <span class="sr-only">Home</span>
+    <svg
+      class="w-5 h-5"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 17 14"
     >
-      <span class="sr-only">Home</span>
-      <svg
-        class="w-5 h-5"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 17 14"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M1 1h15M1 7h15M1 13h15"></path>
-      </svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="nav-links">
-        <li class="my-auto">
-          <a
-            href="/"
-            class={`${selectPage == "home" ? "nav-title-select" : "nav-title"}`}
-            aria-current="page">Sobre mi</a
-          >
-        </li>
-        <li class="my-auto">
-          <a
-            href="/experience"
-            class={`${
-              selectPage == "experience" ? "nav-title-select" : "nav-title"
-            }`}>Experiencia</a
-          >
-        </li>
-        <li class="my-auto">
-          <a
-            href="/project"
-            class={`${
-              selectPage == "project" ? "nav-title-select" : "nav-title"
-            }`}>Proyectos</a
-          >
-        </li>
-        <li class="my-auto">
-          <a
-            href="/certification"
-            class={`${
-              selectPage == "certification" ? "nav-title-select" : "nav-title"
-            }`}>Certificaciones</a
-          >
-        </li>
-        <li class="my-auto">
-          <a
-            href="/contact"
-            class={`${
-              selectPage == "contact" ? "nav-title-select" : "nav-title"
-            }`}>Contacto</a
-          >
-        </li>
-        <li class="my-auto w-[64px]">
-          <ThemeSwitcher />
-        </li>
-      </ul>
-    </div>
-  </article>
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1 1h15M1 7h15M1 13h15"></path>
+    </svg>
+  </button>
+  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+    <ul class="nav-links">
+      <li class="my-auto">
+        <a
+          href="/"
+          class={`${selectPage == "home" ? "nav-title-select" : "nav-title"}`}
+          aria-current="page">Sobre mi</a
+        >
+      </li>
+      <li class="my-auto">
+        <a
+          href="/experience"
+          class={`${
+            selectPage == "experience" ? "nav-title-select" : "nav-title"
+          }`}>Experiencia</a
+        >
+      </li>
+      <li class="my-auto">
+        <a
+          href="/project"
+          class={`${
+            selectPage == "project" ? "nav-title-select" : "nav-title"
+          }`}>Proyectos</a
+        >
+      </li>
+      <li class="my-auto">
+        <a
+          href="/certification"
+          class={`${
+            selectPage == "certification" ? "nav-title-select" : "nav-title"
+          }`}>Certificaciones</a
+        >
+      </li>
+      <li class="my-auto">
+        <a
+          href="/contact"
+          class={`${
+            selectPage == "contact" ? "nav-title-select" : "nav-title"
+          }`}>Contacto</a
+        >
+      </li>
+      <li class="my-auto w-[80px]">
+        <ThemeSwitcher />
+      </li>
+    </ul>
+  </div>
 </nav>

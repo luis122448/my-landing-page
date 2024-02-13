@@ -4,13 +4,13 @@ import StackTech from "../utils/StackTech.astro";
 ---
 
 <section
-  class="flex-col justify-center items-center sm:grid sm:grid-cols-4 sm:gap-x-6 mx-auto mt-4"
+  class="flex flex-col justify-center items-center space-y-4 sm:grid sm:grid-cols-4 sm:gap-x-6 mr-3"
 >
   <article class="sm:col-span-1 space-y-2 mx-auto">
     <img
       src="/assets/image/foto.jpg"
       alt="luis-antonio-calvo-quispe"
-      class="px-2 py-4 w-48 h-48 rounded-full"
+      class="my-auto px-2 py-4 w-48 h-48 rounded-full"
       height="48"
       width="48"
     />
@@ -31,7 +31,7 @@ import StackTech from "../utils/StackTech.astro";
       </a>
     </div>
   </article>
-  <article class="sm:col-span-3 flex-col justify-center space-y-2 mx-4">
+  <article class="sm:col-span-3 flex-col justify-center space-y-2 mx-2 sm:mx-0">
     <h1 class="text-xl font-bold text-slate-800 dark:text-gray-400">
       Hola, soy <span class="text-cyan-600">Luis Antonio Calvo Quispe</span>
     </h1>
@@ -46,12 +46,12 @@ import StackTech from "../utils/StackTech.astro";
       Experiencia en despliege de aplicaciones con Docker en servicios cloud de AWS
       ( <span class="resalt-text">EC2, S3</span> ) y Railway
     </div>
-    <div class="grid grid-cols-3">
-      <div class="col-span-2 flex space-x-3">
+    <div class="flex flex-col space-y-4 items-start sm:grid sm:grid-cols-3">
+      <div class="sm:col-span-2 flex space-x-3">
         <p class="basic-title-list">Stack :</p>
         <StackTech tags={['postgresql','redis','mongodb','springio','angular','docker','oracle']}></StackTech>
       </div>
-      <div class="col-span-1 flex justify-center">
+      <div class="sm:col-span-1 flex justify-center">
         <button type="button" class="basic-button-blue" id="downloadCV">
           <div class="basic-icon-container">
             <i class="fa-solid fa-download fa-lg basic-icon"></i>

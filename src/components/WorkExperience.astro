@@ -10,7 +10,7 @@ const { isOpen } = Astro.props;
 <section class=`${isOpen ? 'body-container' : ''}`>
   <h3 class="section-title">Experiencia Laboral</h3>
   <ol class="border-default">
-    <li class="mb-10 ml-6">
+    <li class="mb-10 ml-1 sm:ml-6">
       <article class="grid-container">
         <div class="col-span-1">
           <img
@@ -76,5 +76,10 @@ const { isOpen } = Astro.props;
     display: grid;
     grid-template-columns: 48px 1fr;
     gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .grid-container {
+      grid-template-columns: 40px 1fr;
+    }
   }
 </style>
