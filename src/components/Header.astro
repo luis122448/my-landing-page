@@ -10,17 +10,17 @@ const { selectPage } = Astro.props;
 ---
 
 <nav class="nav-container">
-  <article class="my-auto w-[170px]">
+  <article class="ml-0 my-auto w-[160px]">
     <a href="/" class="block">
       <h1
-        class="text-xl font-semibold whitesh1ace-nowrap dark:text-white"
+        class="text-lg font-semibold whitesh1ace-nowrap dark:text-white"
       >
         &lt;luis122448.<span class="text-cyan-500">dev</span>/&gt;
       </h1>
     </a>
   </article>
   <article
-    class="max-w-screen-xl flex flex-wrap items-center justify-between p-4"
+    class="max-w-screen-xl flex flex-wrap items-center justify-between py-2 px-4"
   >
     <button
       data-collapse-toggle="navbar-default"
@@ -47,14 +47,14 @@ const { selectPage } = Astro.props;
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="nav-links">
-        <li>
+        <li class="my-auto">
           <a
             href="/"
             class={`${selectPage == "home" ? "nav-title-select" : "nav-title"}`}
             aria-current="page">Sobre mi</a
           >
         </li>
-        <li>
+        <li class="my-auto">
           <a
             href="/experience"
             class={`${
@@ -62,7 +62,7 @@ const { selectPage } = Astro.props;
             }`}>Experiencia</a
           >
         </li>
-        <li>
+        <li class="my-auto">
           <a
             href="/project"
             class={`${
@@ -70,7 +70,7 @@ const { selectPage } = Astro.props;
             }`}>Proyectos</a
           >
         </li>
-        <li>
+        <li class="my-auto">
           <a
             href="/certification"
             class={`${
@@ -78,7 +78,7 @@ const { selectPage } = Astro.props;
             }`}>Certificaciones</a
           >
         </li>
-        <li>
+        <li class="my-auto">
           <a
             href="/contact"
             class={`${
@@ -86,10 +86,10 @@ const { selectPage } = Astro.props;
             }`}>Contacto</a
           >
         </li>
+        <li class="my-auto w-[64px]">
+          <ThemeSwitcher />
+        </li>
       </ul>
     </div>
-  </article>
-  <article class="my-auto w-[40px] hidden lg:block">
-    <ThemeSwitcher />
   </article>
 </nav>
