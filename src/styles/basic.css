@@ -89,6 +89,10 @@
   @apply mb-4 text-base font-normal text-gray-800 dark:text-gray-300
 }
 
+.basic-text-sm{
+  @apply mb-4 text-sm font-semibold dark:font-normal text-gray-800 dark:text-gray-300
+}
+
 .basic-text-xs{
   @apply mb-4 text-xs font-normal text-gray-800 dark:text-gray-300
 }
