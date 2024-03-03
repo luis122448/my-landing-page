@@ -1,0 +1,179 @@
+---
+import "../../styles/basic.css";
+---
+
+<section class="card-header">
+  <div
+    class="card-cover"
+    style="background-image: url('/assets/images/foto-industrial.webp')"
+  >
+  </div>
+  <div
+    class="w-16 h-16 relative bg-slate-200
+dark:bg-slate-100 rounded hover:scale-120 hover:transform transition-all card-angular"
+  >
+    <img
+      alt="Angular"
+      src="../assets/svg/angular-icon.svg"
+      class="w-12 h-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      title="Angular"
+    />
+  </div>
+  <div
+    class="w-16 h-16 relative bg-slate-200
+dark:bg-slate-100 rounded hover:scale-120 hover:transform transition-all card-spring"
+  >
+    <img
+      alt="Spring Boot"
+      src="../assets/svg/springio-icon.svg"
+      class="w-12 h-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      title="Spring Boot"
+    />
+  </div>
+  <div
+    class="w-16 h-16 relative bg-slate-200
+dark:bg-slate-100 rounded hover:scale-120 hover:transform transition-all card-oracle z-10"
+  >
+    <img
+      alt="Oracle"
+      src="../assets/svg/oracle-name-icon.svg"
+      class="w-14 h-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      title="Oracle"
+    />
+  </div>
+  <div
+    class="w-16 h-16 relative bg-slate-200
+dark:bg-slate-100 rounded hover:scale-120 hover:transform transition-all card-postgresql"
+  >
+    <img
+      alt="PostgreSQL"
+      src="../assets/svg/postgresql-icon.svg"
+      class="w-12 h-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      title="PostgreSQL"
+    />
+  </div>
+  <div
+    class="w-16 h-16 relative bg-slate-200
+dark:bg-slate-100 rounded hover:scale-120 hover:transform transition-all card-mysql"
+  >
+    <img
+      alt="MySQL"
+      src="../assets/svg/python-icon.svg"
+      class="w-12 h-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      title="MySQL"
+    />
+  </div>
+  <h1 class="card-fullname">Luis Antonio Calvo Quispe</h1>
+  <h2 class="card-jobtitle">FULLSATCK DEVELOPER</h2>
+  <h2 class="card-email">luis122448@gmail.com</h2>
+</section>
+<style>
+  .card-header {
+    position: relative;
+    display: flex;
+    height: 200px;
+    width: 800px;
+    flex-shrink: 0;
+  }
+
+  .card-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    will-change: top;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+  }
+
+  .card-angular {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 45%;
+    left: 17%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15%;
+    transform: translate(-50%, -75%);
+  }
+
+  .card-spring {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 45%;
+    left: 27%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15%;
+    transform: translate(-50%, -75%);
+  }
+
+  .card-postgresql {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 65%;
+    left: 22%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15%;
+    transform: translate(-50%, -75%);
+  }
+
+  .card-oracle {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 65%;
+    left: 32%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15%;
+    transform: translate(-50%, -75%);
+  }
+
+  .card-mysql {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 45%;
+    left: 37%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15%;
+    transform: translate(-50%, -75%);
+  }
+
+  .card-fullname {
+    position: absolute;
+    bottom: 0;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    top: 25%;
+    left: 45%;
+    color: black;
+  }
+
+  .card-jobtitle {
+    position: absolute;
+    font-size: 18px;
+    white-space: nowrap;
+    font-weight: bold;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    top: 44%;
+    left: 45%;
+    color:#292524
+  }
+
+  .card-email {
+    position: absolute;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: bold;
+    text-transform: lowercase;
+    top: 58%;
+    left: 45%;
+    color: #083344;
+  }
+</style>

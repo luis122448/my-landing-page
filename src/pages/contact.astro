@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import CardStackTech from "../utils/CardStackTech.astro";
 import CardPresentation from "../components/model/CardPresentation.astro";
+import BannerPresentation from "../components/model/BannerPresentation.astro";
 import "../styles/basic.css";
 ---
 
@@ -12,22 +13,23 @@ import "../styles/basic.css";
   ,
   description="Portafolios de projectos de luis122448"
 >
-  <main class="main-container">
-    <Header selectPage="contact" />
-    <section class="body-container">
+<main class="main-container">
+  <Header selectPage="contact" />
+  <!-- <BannerPresentation></BannerPresentation> -->
+  <section class="body-container">
       <div
         class="py-6 px-4 rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-gray-950 sm:grid sm:grid-cols-5"
       >
         <article class="hidden sm:block sm:col-span-2">
           <CardStackTech
             tags={[
+              "springio",
+              "angular",
+              "python",
               "postgresql",
               "mysql",
               "oracle",
-              "redis",
               "mongodb",
-              "springio",
-              "angular",
               "docker",
               "aws",
             ]}
