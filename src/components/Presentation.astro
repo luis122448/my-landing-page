@@ -15,7 +15,7 @@ import StackTech from "../utils/StackTech.astro";
       width="48"
     />
     <div
-      class="mx-auto pt-2 text-slate-800 dark:text-gray-400 flex justify-center space-x-4"
+      class="mx-auto pt-2 text-slate-800 dark:text-gray-200 flex justify-center space-x-4"
     >
       <a
         href="https://www.linkedin.com/in/luis-antonio-calvo-quispe-57a33b229/"
@@ -36,20 +36,33 @@ import StackTech from "../utils/StackTech.astro";
       Hola, soy <span class="text-cyan-600">Luis Antonio Calvo Quispe</span>
     </h1>
     <h4 class="basic-title">
-      Full Stack Developer | Bachiller en Ingenieria Industrial
+      Jr. Full Stack Developer | Bachiller en Ingenieria Industrial
     </h4>
     <div class="basic-text">
-      Bachiller en Ingenieria Industrial especializado como Full Stack Developer
-      ( <span class="resalt-text">Java - Angular</span> ) con dos años de experiencia como desarrollador y
-      administrador de base de datos relacionales ( <span class="resalt-text">Oracle, PostgresSQL y MySQL</span>
-      ) y desarrollo de servicios web con <span class="resalt-text">Python - FastAPI</span><br />
-      Experiencia en despliege de aplicaciones con Docker en servicios cloud de AWS
-      ( <span class="resalt-text">EC2, S3</span> ) y Railway
+      Ingenierio Industrial con 2 años de experiencia en el desarrollo de
+      Aplicaciones Web <span class="resalt-text">(Java y Angular)</span> y
+      Administración de Base de Datos <span class="resalt-text"
+        >(Oracle, MySQL, PostgreSQL y Interbase)</span
+      >.<br />
+      Desarrollo de soluciones ETL, para
+      transformación,  migración y analítica de datos con <span class="resalt-text">Python y FastAPI</span>.<br />
+      Despliegue aplicaciones con Docker y Docker-Compose en servicodores
+      Cloud de <span class="resalt-text">Oracle, AWS (EC2, S3) y Railway</span>.
     </div>
     <div class="flex flex-col space-y-4 items-start sm:grid sm:grid-cols-3">
       <div class="sm:col-span-2 flex space-x-3">
         <p class="basic-title-list">Stack :</p>
-        <StackTech tags={['angular','springio','python','postgresql','mongodb','docker','oracle']}></StackTech>
+        <StackTech
+          tags={[
+            "angular",
+            "springio",
+            "python",
+            "postgresql",
+            "docker",
+            "oracle",
+            "aws",
+          ]}
+        />
       </div>
       <div class="sm:col-span-1 flex justify-center">
         <button type="button" class="basic-button-blue" id="downloadCV">
