@@ -1,0 +1,14 @@
+services:
+  my-landing-page:
+    container_name: my-landing-page
+    env_file:
+      - ./.env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+
+networks:
+  smart-shell-net:
+    external: true
