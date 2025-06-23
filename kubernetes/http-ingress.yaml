@@ -4,9 +4,6 @@ kind: Ingress
 metadata:
   name: my-landing-page-ingress
   namespace: ingress-nginx
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
   labels:
     app.kubernetes.io/name: my-landing-page
     app.kubernetes.io/component: ingress
@@ -34,8 +31,3 @@ spec:
             name: my-landing-page-service
             port:
               number: 4000
-  tls:
-  - hosts:
-    - luis122448.com
-    - www.luis122448.com
-    secretName: luis122448-com-tls
