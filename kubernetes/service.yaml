@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-landing-page-service
+  namespace: ingress-nginx
 spec:
   type: ClusterIP
   selector:

@@ -1,18 +1,42 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-landing-page-ingress
+  namespace: ingress-nginx
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # nginx.ingress.kubernetes.io/permanent-redirect: https://luis122448.com
+  labels:
+    app.kubernetes.io/name: my-landing-page
+    app.kubernetes.io/component: ingress
+    app.kubernetes.io/part-of: luis122448-com-suite
 spec:
+  ingressClassName: nginx
   rules:
-    - host: "luis122448.com"
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: my-landing-page-service
-                port:
-                  number: 4000
+  - host: "luis122448.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-landing-page-service
+            port:
+              number: 4000
+  - host: "www.luis122448.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-landing-page-service
+            port:
+              number: 4000
+  tls:
+  - hosts:
+    - luis122448.com
+    - www.luis122448.com
+    secretName: luis122448-com-tls
