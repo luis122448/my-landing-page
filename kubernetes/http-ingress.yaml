@@ -1,9 +1,8 @@
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-landing-page-ingress
-  namespace: ingress-nginx
+  name: my-landing-page-frontend-ingress
+  namespace: my-landing-page
   labels:
     app.kubernetes.io/name: my-landing-page
     app.kubernetes.io/component: ingress
@@ -18,7 +17,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: my-landing-page-service
+            name: my-landing-page-frontend-service
             port:
               number: 4000
   - host: "www.luis122448.com"
@@ -28,6 +27,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: my-landing-page-service
+            name: my-landing-page-frontend-service
             port:
               number: 4000
